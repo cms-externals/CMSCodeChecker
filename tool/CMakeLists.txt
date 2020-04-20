@@ -51,7 +51,7 @@ install(PROGRAMS run_CMSCodeChecker.py DESTINATION bin)
 
 # we need to install the builtin headers in a path which is searched by the tool
 # FIXME: a soft link would be better
-install(DIRECTORY ${LLVM_LIBRARY_DIR}/clang/${LLVM_PACKAGE_VERSION}/include DESTINATION lib64/clang/${LLVM_PACKAGE_VERSION})
+install(DIRECTORY ${LLVM_LIBRARY_DIR}/clang/10.0.1/include DESTINATION lib64/clang/10.0.1)
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
   # On MacOS we need to do the same with C++ headers since they are in a non-standard location
